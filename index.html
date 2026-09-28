@@ -1,0 +1,546 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ledgeway Advisory | Automation &amp; AI Consulting for Small Businesses, Franklin MA</title>
+<meta name="description" content="Ledgeway Advisory helps small businesses of 5 to 30 people find and fix manual work with automation, AI, and better processes. Fixed-fee 90-day engagements. Serving greater Boston, MetroWest, and Rhode Island.">
+<link rel="canonical" href="https://ledgewayadvisory.com/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Ledgeway Advisory">
+<meta property="og:description" content="Find what slows your team down. Then get it out of the way.">
+<meta property="og:url" content="https://ledgewayadvisory.com/">
+<meta name="robots" content="index,follow">
+
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --ground:#F2F4F1;
+  --surface:#FFFFFF;
+  --ink:#18221F;
+  --muted:#56645F;
+  --rule:#D5DBD7;
+  --spruce:#1E5A48;
+  --spruce-ink:#FFFFFF;
+  --marker:rgba(240,196,64,.55);
+  --marker-solid:#E9B93A;
+  --tint:#E6ECE8;
+  --serif:"Young Serif", Georgia, "Times New Roman", serif;
+  --sans:"Public Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --ground:#111715;
+    --surface:#18201D;
+    --ink:#E4E9E6;
+    --muted:#9AA8A2;
+    --rule:#2B3531;
+    --spruce:#7CC2A6;
+    --spruce-ink:#0D1411;
+    --marker:rgba(233,185,58,.30);
+    --marker-solid:#E9B93A;
+    --tint:#1C2522;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --ground:#111715;
+  --surface:#18201D;
+  --ink:#E4E9E6;
+  --muted:#9AA8A2;
+  --rule:#2B3531;
+  --spruce:#7CC2A6;
+  --spruce-ink:#0D1411;
+  --marker:rgba(233,185,58,.30);
+  --marker-solid:#E9B93A;
+  --tint:#1C2522;
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{
+  background:var(--ground);
+  color:var(--ink);
+  font-family:var(--sans);
+  font-size:17px;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:var(--spruce)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--spruce);outline-offset:3px;border-radius:2px}
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.15;text-wrap:balance;margin:0}
+h1{font-size:clamp(2.1rem,5.2vw,3.6rem);letter-spacing:-.01em}
+h2{font-size:clamp(1.6rem,3.4vw,2.35rem)}
+h3{font-size:1.3rem}
+p{margin:0}
+.wrap{max-width:1120px;margin-inline:auto;padding-inline:clamp(16px,4vw,40px)}
+.prose{max-width:62ch}
+.eyebrow{font-family:var(--mono);font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.lede{font-size:1.18rem;color:var(--muted);max-width:56ch}
+
+/* header */
+.top{
+  position:sticky;top:env(safe-area-inset-top,0px);z-index:10;
+  background:color-mix(in srgb, var(--ground) 92%, transparent);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--rule);
+}
+.top .wrap{display:flex;align-items:center;gap:24px;padding-block:14px}
+.brand{font-family:var(--serif);font-size:1.25rem;color:var(--ink);text-decoration:none;margin-right:auto;display:flex;white-space:nowrap;align-items:center;gap:10px}
+.brand svg{flex:none}
+.nav{display:flex;gap:22px;font-size:.93rem}
+.nav a{color:var(--ink);text-decoration:none}
+.nav a:hover{color:var(--spruce)}
+.btn{
+  display:inline-block;background:var(--spruce);color:var(--spruce-ink);
+  text-decoration:none;font-weight:600;font-size:.95rem;
+  padding:11px 18px;border-radius:4px;border:0;cursor:pointer;font-family:var(--sans);
+}
+.btn:hover{filter:brightness(1.08)}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--rule)}
+@media (max-width:820px){.nav{display:none}}
+@media (max-width:420px){.top .btn{padding:9px 12px;font-size:.88rem}.brand{font-size:1.1rem}}
+
+/* hero */
+.hero{padding-block:clamp(48px,8vw,96px) clamp(40px,6vw,72px)}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:clamp(32px,5vw,64px);align-items:start}
+@media (max-width:940px){.hero-grid{grid-template-columns:minmax(0,1fr)}}
+.hero-grid>*{min-width:0}
+.hero-copy{display:flex;flex-direction:column;gap:22px;padding-top:8px}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.hero-note{font-size:.9rem;color:var(--muted)}
+.hero-aside{font-family:var(--serif);font-size:1.22rem;line-height:1.4;max-width:34ch;padding-left:16px;border-left:3px solid var(--marker-solid)}
+
+/* the ledger */
+.ledger{
+  background:var(--surface);border:1px solid var(--rule);border-radius:3px;
+  box-shadow:0 1px 0 var(--rule), 0 18px 40px -28px rgba(0,0,0,.35);
+}
+.ledger-head{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:16px 18px 12px;border-bottom:2px solid var(--ink)}
+.ledger-head strong{font-family:var(--serif);font-weight:400;font-size:1.08rem}
+.ledger-head span{font-family:var(--mono);font-size:.74rem;color:var(--muted);letter-spacing:.04em}
+.ledger-scroll{overflow:visible}
+.ledger table{width:100%;border-collapse:collapse;font-size:.86rem}
+.ledger th{font-family:var(--mono);font-weight:500;font-size:.68rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);text-align:left;padding:10px 10px;border-bottom:1px solid var(--rule)}
+.ledger td{padding:11px 10px;overflow-wrap:anywhere;border-bottom:1px solid var(--rule);vertical-align:top}
+.ledger td.num,.ledger th.num{text-align:right;font-family:var(--mono);font-variant-numeric:tabular-nums;white-space:nowrap}
+.ledger tr.first td:first-child{position:relative}
+.hl{
+  background-image:linear-gradient(var(--marker),var(--marker));
+  background-repeat:no-repeat;background-size:100% 78%;background-position:0 70%;
+  padding-inline:2px;margin-inline:-2px;
+  animation:sweep .9s cubic-bezier(.3,.7,.3,1) both;
+}
+tr:nth-child(2) .hl{animation-delay:.25s}
+@keyframes sweep{from{background-size:0% 78%}to{background-size:100% 78%}}
+@media (prefers-reduced-motion: reduce){.hl{animation:none}}
+.kind{display:inline-block;font-family:var(--mono);font-size:.68rem;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);border:1px solid var(--rule);border-radius:2px;padding:1px 6px;margin-top:5px}
+.ledger tfoot td{border-bottom:0;border-top:2px solid var(--ink);font-weight:600}
+.ledger-foot{padding:12px 18px 16px;font-size:.8rem;color:var(--muted)}
+.ledger td:first-child{font-weight:600}
+@media (max-width:600px){
+  .ledger thead{display:none}
+  .ledger tbody tr{display:grid;grid-template-columns:1fr auto;gap:4px 12px;padding:14px 16px;border-bottom:1px solid var(--rule)}
+  .ledger tbody td{padding:0;border:0}
+  .ledger tbody td:nth-child(1){grid-column:1;grid-row:1}
+  .ledger tbody td:nth-child(3){grid-column:2;grid-row:1}
+  .ledger tbody td:nth-child(3)::after,.ledger tfoot td.num::after{content:" hrs/wk";color:var(--muted);font-size:.8em}
+  .ledger tbody td:nth-child(2){grid-column:1 / -1;color:var(--muted)}
+  .ledger tbody td:nth-child(4){grid-column:1 / -1}
+  .ledger tbody td:nth-child(4)::before{content:"Better fix: ";color:var(--muted)}
+  .ledger tfoot tr{display:flex;justify-content:space-between;padding:12px 16px}
+  .ledger tfoot td{padding:0;border:0}
+  .ledger tfoot td:last-child{display:none}
+  .ledger tfoot{border-top:2px solid var(--ink);display:block}
+}
+
+/* sections */
+section{padding-block:clamp(56px,8vw,96px)}
+.band{background:var(--tint)}
+.section-head{display:flex;flex-direction:column;gap:14px;margin-bottom:clamp(28px,4vw,44px)}
+
+/* process */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:2px solid var(--ink)}
+@media (max-width:860px){.steps{grid-template-columns:1fr}}
+.step{padding:22px 24px 26px 0;display:flex;flex-direction:column;gap:10px}
+.step + .step{padding-left:24px;border-left:1px solid var(--rule)}
+@media (max-width:860px){.step + .step{padding-left:0;border-left:0;border-top:1px solid var(--rule)}}
+.step .when{font-family:var(--mono);font-size:.8rem;color:var(--spruce);font-weight:500}
+.step ul{margin:4px 0 0;padding-left:18px;color:var(--muted);font-size:.95rem}
+.step li + li{margin-top:4px}
+.price-tag{font-family:var(--mono);font-size:.74rem;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);margin-top:auto;padding-top:8px}
+
+.ask{margin-top:clamp(36px,5vw,56px);display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:clamp(24px,4vw,56px);align-items:start}
+@media (max-width:860px){.ask{grid-template-columns:1fr}}
+.ask-list{display:grid;gap:0;margin:0;padding:0;list-style:none;border-top:1px solid var(--rule)}
+.ask-list li{display:grid;grid-template-columns:9.5rem 1fr;gap:16px;padding:14px 0;border-bottom:1px solid var(--rule)}
+.ask-list b{font-weight:600}
+.ask-list span{color:var(--muted)}
+@media (max-width:520px){.ask-list li{grid-template-columns:1fr;gap:2px}}
+
+/* industries */
+.inds{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(20px,3vw,32px) clamp(24px,4vw,56px)}
+@media (max-width:860px){.inds{grid-template-columns:1fr}}
+.ind{display:flex;flex-direction:column;gap:10px;padding-top:18px;border-top:1px solid var(--rule)}
+.ind p{color:var(--muted);font-size:.95rem}
+.ind ul{margin:0;padding:0;list-style:none;display:grid;gap:6px}
+.ind li{padding-left:18px;position:relative;font-size:.97rem}
+.ind li::before{content:"";position:absolute;left:0;top:.68em;width:9px;height:2px;background:var(--marker-solid)}
+.also{margin-top:32px;color:var(--muted);max-width:62ch}
+
+/* automation / AI */
+.ai-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:clamp(28px,5vw,64px);align-items:start}
+@media (max-width:860px){.ai-grid{grid-template-columns:1fr}}
+.ai-grid .prose{display:flex;flex-direction:column;gap:16px}
+.uses{background:var(--surface);border:1px solid var(--rule);border-radius:3px;padding:20px 22px}
+.uses h3{font-size:1.1rem;margin-bottom:12px}
+.uses dl{margin:0;display:grid;gap:12px}
+.uses dt{font-weight:600;font-size:.95rem}
+.uses dd{margin:0;color:var(--muted);font-size:.92rem}
+
+/* about */
+.about{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(28px,5vw,64px)}
+@media (max-width:860px){.about{grid-template-columns:1fr}}
+.about .prose{display:flex;flex-direction:column;gap:16px}
+.facts{margin:0;padding:0;list-style:none;border-top:2px solid var(--ink)}
+.facts li{display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px solid var(--rule);font-size:.95rem}
+.facts li span:first-child{color:var(--muted)}
+.facts li span:last-child{text-align:right}
+
+/* faq */
+.faq{display:grid;gap:0;border-top:1px solid var(--rule);max-width:820px}
+.faq details{border-bottom:1px solid var(--rule)}
+.faq summary{cursor:pointer;list-style:none;padding:18px 36px 18px 0;font-weight:600;position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:4px;top:14px;font-family:var(--mono);font-size:1.3rem;color:var(--muted)}
+.faq details[open] summary::after{content:"\2212"}
+.faq details p{padding:0 0 20px;color:var(--muted);max-width:66ch}
+
+/* contact */
+.contact{background:var(--spruce);color:var(--spruce-ink)}
+.contact .wrap{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:clamp(28px,5vw,64px);align-items:center}
+@media (max-width:860px){.contact .wrap{grid-template-columns:1fr}}
+.contact h2{color:var(--spruce-ink)}
+.contact p{opacity:.88;max-width:52ch;margin-top:14px}
+.mailbox{background:var(--surface);color:var(--ink);border-radius:3px;padding:20px 22px;display:flex;flex-direction:column;gap:12px}
+.mailbox .addr{font-family:var(--mono);font-size:1.05rem;word-break:break-all;user-select:all}
+.mailbox .row{display:flex;gap:10px;flex-wrap:wrap}
+.mailbox small{color:var(--muted);font-size:.84rem}
+
+footer{padding-block:28px;font-size:.88rem;color:var(--muted)}
+footer .wrap{display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:space-between}
+footer a{color:var(--muted)}
+</style>
+</head>
+<body>
+
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Ledgeway Advisory, home">
+      <svg width="26" height="20" viewBox="0 0 26 20" aria-hidden="true"><path d="M1 19h24M1 13h15M1 7h8" stroke="currentColor" stroke-width="2.2" fill="none" stroke-linecap="square"/><path d="M16 13v6M9 7v6" stroke="currentColor" stroke-width="2.2" fill="none"/></svg>
+      Ledgeway Advisory
+    </a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#how">How it works</a>
+      <a href="#who">Who it's for</a>
+      <a href="#automation-and-ai">Automation &amp; AI</a>
+      <a href="#about">About</a>
+    </nav>
+    <a class="btn" href="#contact">Book a call</a>
+  </div>
+</header>
+
+<main id="top">
+  <!-- HERO -->
+  <div class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <span class="eyebrow">Massachusetts and Rhode Island</span>
+        <h1>Find what slows your team down. Then get it out of the way.</h1>
+        <p class="lede">Ledgeway Advisory helps owner-run businesses of 5 to 30 people find where time is lost each week. We fix the biggest issues in 90 days and teach you how to not need our help.</p>
+        <p class="hero-aside">You probably know what is wrong. You just do not have the time to fix it. I am here to help.</p>
+        <div class="hero-cta">
+          <a class="btn" href="#contact">Book a 30-minute intro call</a>
+          <a class="btn ghost" href="#how">See how it works</a>
+        </div>
+        <p class="hero-note">No software to buy from us. No ongoing retainer.</p>
+      </div>
+
+      <figure class="ledger" style="margin:0" aria-label="Illustrative example of a first-month findings list">
+        <div class="ledger-head">
+          <strong>What the first month turns up</strong>
+          <span>ILLUSTRATIVE · 12-PERSON PROFESSIONAL PRACTICE</span>
+        </div>
+        <div class="ledger-scroll">
+          <table>
+            <thead>
+              <tr><th>Task</th><th>Today</th><th class="num">Hrs / wk</th><th>Better fix</th></tr>
+            </thead>
+            <tbody>
+              <tr class="first">
+                <td>Chasing client documents</td>
+                <td>Staff send reminder emails one client at a time</td>
+                <td class="num">6.0</td>
+                <td>Automatic reminders from the client portal you already have<br><span class="kind">Existing tool</span></td>
+              </tr>
+              <tr>
+                <td>New client intake</td>
+                <td>Details retyped from PDF forms into practice software</td>
+                <td class="num">4.0</td>
+                <td>Forms read and entered automatically, then checked by staff<br><span class="kind">Automation</span></td>
+              </tr>
+              <tr>
+                <td>Status questions</td>
+                <td>Clients call, whoever is free stops to look it up</td>
+                <td class="num">3.5</td>
+                <td>A short status email at each stage of the job<br><span class="kind">Process</span></td>
+              </tr>
+              <tr>
+                <td>Booking meetings</td>
+                <td>Back-and-forth emails to find a time</td>
+                <td class="num">2.0</td>
+                <td>A $12 a month booking link<br><span class="kind">Buy a service</span></td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr><td colspan="2">Recoverable each week</td><td class="num">15.5</td><td></td></tr>
+            </tfoot>
+          </table>
+        </div>
+        <figcaption class="ledger-foot">Only one of the four needed anything built.</figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <!-- HOW IT WORKS -->
+  <section id="how" class="band">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">How it works</span>
+        <h2>Ninety days to real changes. Then it's yours.</h2>
+        <p class="lede">Every engagement starts the same way. I learn how your week actually runs before recommending anything.</p>
+      </div>
+
+      <div class="steps">
+        <div class="step">
+          <span class="when">Days 1–30</span>
+          <h3>Listen and map</h3>
+          <p>I sit down with you and the people doing the work. We walk through a normal week, task by task.</p>
+          <ul>
+            <li>A list of where time goes, with hours and cost</li>
+            <li>The two or three changes worth making first</li>
+          </ul>
+        </div>
+        <div class="step">
+          <span class="when">Days 31–90</span>
+          <h3>Build and hand over</h3>
+          <p>We make those changes together. Sometimes that means building something. Often it means getting more out of the tools you already pay for.</p>
+          <ul>
+            <li>Working changes, in use by your team</li>
+            <li>Training and plain-English notes on how it all works</li>
+          </ul>
+          <span class="price-tag">Fixed fee, agreed up front</span>
+        </div>
+        <div class="step">
+          <span class="when">Year one and beyond</span>
+          <h3>Plan what's next</h3>
+          <p>You leave with a written plan for the rest of the year. I can help with it, or your team can run it.</p>
+          <ul>
+            <li>A one-year roadmap, sold separately if you want help</li>
+            <li>A longer look at what's possible, at no charge</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="ask">
+        <div class="prose">
+          <h3>What I ask of you</h3>
+          <p style="color:var(--muted);margin-top:10px">Changes stick when someone inside the business owns them. So I only take on work with a few commitments in place.</p>
+        </div>
+        <ul class="ask-list">
+          <li><b>A named sponsor</b><span>Usually the owner or a lead. They make decisions and clear the path.</span></li>
+          <li><b>Weekly time</b><span>A standing check-in each week, plus access to the people who do the work.</span></li>
+          <li><b>Sign-off</b><span>You approve each milestone before we move on.</span></li>
+          <li><b>A shared view</b><span>You get a private client page that shows where every item stands, updated as the work moves.</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHO -->
+  <section id="who">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Who it's for</span>
+        <h2>Small businesses where the owner still does too much.</h2>
+        <p class="lede">Most clients have 5 to 30 people and have outgrown the way they did things at 3. If any of these sound familiar, we should talk.</p>
+      </div>
+
+      <div class="inds">
+        <div class="ind">
+          <h3>Trades</h3>
+          <ul>
+            <li>Every estimate written from scratch</li>
+            <li>Invoices waiting on the owner to find time</li>
+            <li>Job photos and notes that never make it back to the office</li>
+          </ul>
+        </div>
+        <div class="ind">
+          <h3>Service businesses</h3>
+          <ul>
+            <li>Schedule changes handled in group texts</li>
+            <li>Recurring billing checked line by line</li>
+            <li>New customer details copied between three systems</li>
+          </ul>
+        </div>
+        <div class="ind">
+          <h3>Professional practices</h3>
+          <ul>
+            <li>Client documents chased by email, again</li>
+            <li>The same ten questions answered every week</li>
+            <li>Intake forms retyped into practice software</li>
+          </ul>
+        </div>
+      </div>
+      <p class="also">Not on the list? That's fine. Our process works the same in any business with repeat work.</p>
+    </div>
+  </section>
+
+  <!-- AUTOMATION & AI -->
+  <section id="automation-and-ai" class="band">
+    <div class="wrap ai-grid">
+      <div class="prose">
+        <span class="eyebrow">Automation &amp; AI for small business</span>
+        <h2>Looking for help with AI? Start here.</h2>
+        <p>A lot of owners come to me because someone told them they should be using AI. Maybe a vendor pitched it, or a competitor seems to be ahead. That is why I am here.</p>
+        <p>I build with AI tools every day, and sometimes they are the right answer. Just as often the better fix is simpler. A setting in software you already own. A service that costs forty dollars a month. A change in who does what.</p>
+        <p>My job is to tell you which is which, and to back it up with numbers from your own business. You get the fix that pays off, whatever it's called.</p>
+      </div>
+      <aside class="uses">
+        <h3>Where AI tends to earn its keep in a small business</h3>
+        <dl>
+          <div><dt>Sorting what comes in</dt><dd>Reading incoming email and forms, and routing each one to the right person or system.</dd></div>
+          <div><dt>Pulling details from documents</dt><dd>Invoices, work orders, and client paperwork turned into data your systems can use in ways you may not have considered.</dd></div>
+          <div><dt>First drafts</dt><dd>Estimates, follow-ups, and routine letters drafted for a person to check and send.</dd></div>
+          <div><dt>Answering the common questions</dt><dd>Hours, status, and policy questions handled so staff can focus on the hard ones.</dd></div>
+        </dl>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="wrap about">
+      <div>
+        <span class="eyebrow">About</span>
+        <h2 style="margin-top:14px">I'm Mark Aldred. Ledgeway is me.</h2>
+      </div>
+      <div class="prose">
+        <p>I spent more than 15 years leading software engineering teams at a large enterprise technology company. Most recently I led a 50-person organization through a change in how it used automation day to day. That meant new tools, but mostly it meant new habits and new ways of solving problems.</p>
+        <p>I started Ledgeway because small businesses rarely get that kind of help. Big firms have operations teams. A 12-person company has an owner who is already working weekends.</p>
+        <p>When you hire Ledgeway, you work with me directly. I don't hand you off to a junior team, and I don't sell software.</p>
+        <ul class="facts">
+          <li><span>Based in</span><span>Franklin, MA</span></li>
+          <li><span>Works with</span><span>Greater Boston, MetroWest, Rhode Island, and remote</span></li>
+          <li><span>Background</span><span>Software engineering leadership</span></li>
+        </ul>
+      </div>
+    </div>
+    <!-- CASE STUDY: add the first client example here once results are in -->
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="band">
+    <div class="wrap">
+      <div class="section-head">
+        <span class="eyebrow">Questions</span>
+        <h2>Common questions</h2>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>Is Ledgeway an AI consulting firm?</summary>
+          <p>Partly. I help small businesses decide where AI and automation make sense and then put them to work. But the goal is the right fix, and sometimes that's a process change or an off-the-shelf service. I'll recommend whatever pays off for your business.</p>
+        </details>
+        <details>
+          <summary>Will I need to keep paying you after the 90 days?</summary>
+          <p>No. Everything is built to be handed over. Your team gets training and written notes so they can run it and change it without me. If you want help with the year-one plan, that's a separate choice.</p>
+        </details>
+        <details>
+          <summary>What does it cost?</summary>
+          <p>The first engagement is a fixed fee agreed before any work starts. It depends on the size of the business and how much we build. We'll talk numbers on the intro call.</p>
+        </details>
+        <details>
+          <summary>How much of my team's time will this take?</summary>
+          <p>A short weekly check-in with your sponsor, plus a few hours with the people who do the work during the first month. After that it's mostly testing and training.</p>
+        </details>
+        <details>
+          <summary>Do you only work in certain industries?</summary>
+          <p>No. Trades, service businesses, and professional practices are where I see the most repeat work. Any business with 5 to 30 people and a lot of manual steps is a good fit.</p>
+        </details>
+        <details>
+          <summary>Do you work on site?</summary>
+          <p>Yes, across greater Boston, MetroWest, and Rhode Island. The first month usually includes time on site. The rest can be remote.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact">
+    <div class="wrap">
+      <div>
+        <h2>Tell me what eats your week.</h2>
+        <p>Send a few lines about your business and the task you'd most like to stop doing. I'll reply within one business day to set up a 30-minute call. No pitch deck.</p>
+      </div>
+      <div class="mailbox">
+        <small>Email</small>
+        <span class="addr" id="addr">hello@ledgewayadvisory.com</span>
+        <div class="row">
+          <a class="btn" href="mailto:hello@ledgewayadvisory.com?subject=Intro%20call">Write an email</a>
+          <button class="btn ghost" type="button" id="copy">Copy address</button>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Ledgeway Advisory · Franklin, Massachusetts</span>
+    <span>Current clients: <a href="https://portal.ledgewayadvisory.com">sign in to your client page</a></span>
+  </div>
+</footer>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"ProfessionalService",
+  "name":"Ledgeway Advisory",
+  "url":"https://ledgewayadvisory.com",
+  "description":"Operations, automation and AI consulting for small businesses of 5 to 30 people. Fixed-fee 90-day engagements that find and fix manual work.",
+  "founder":{"@type":"Person","name":"Mark Aldred"},
+  "address":{"@type":"PostalAddress","addressLocality":"Franklin","addressRegion":"MA","addressCountry":"US"},
+  "areaServed":["Greater Boston","MetroWest Massachusetts","Rhode Island"],
+  "knowsAbout":["AI consulting for small business","business process automation","workflow automation","operations consulting"],
+  "email":"hello@ledgewayadvisory.com"
+}
+</script>
+<script>
+document.getElementById('copy').addEventListener('click', function(){
+  var b=this, t=document.getElementById('addr').textContent.trim();
+  function done(){b.textContent='Copied';setTimeout(function(){b.textContent='Copy address'},1600)}
+  function fallback(){var r=document.createRange();r.selectNodeContents(document.getElementById('addr'));var s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent='Selected. Press Ctrl+C'}
+  try{navigator.clipboard.writeText(t).then(done,fallback)}catch(e){fallback()}
+});
+</script>
+
+</body>
+</html>
